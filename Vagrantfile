@@ -7,7 +7,10 @@
 # you're doing.
 
 $script = <<-SCRIPT 
-
+if [ $EUID -ne 0 ]; then
+  echo ("this script must be run as a root")
+  exit 1
+fi  
 sudo apt update -y
 
 sudo cat /etc/system-release   -y 
