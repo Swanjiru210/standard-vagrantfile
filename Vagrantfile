@@ -5,7 +5,7 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-
+# 6/14/24
 $script = <<-SCRIPT 
 if [ $EUID -ne 0 ]; then
   echo ("this script must be run as a root")
